@@ -1,0 +1,20 @@
+{
+    "name":  "playwright",
+    "version":  "1.0.0",
+    "description":  "",
+    "main":  "index.js",
+    "scripts":  {
+                    "send:tech-news":  "node scripts/daily-tech-news-whatsapp.js",
+                    "send:tech-news:dry":  "node scripts/daily-tech-news-whatsapp.js --dry-run"
+                },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "type":  "commonjs",
+    "devDependencies":  {
+                            "@playwright/test":  "^1.58.2",
+                            "@types/node":  "^25.3.0"
+                        }
+}
