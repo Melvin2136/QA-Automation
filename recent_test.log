@@ -1,0 +1,103 @@
+
+Running 1 test using 1 worker
+
+[fileHelper] Loaded 2 file(s) from: C:\Users\melvi\OneDrive\Desktop\playwright\tests\temp
+[DEBUG] Strategy 1: Using setInputFiles directly on hidden file input
+  ✘  1 [PRISM – Chromium] › tests\PRISM\test\verifyUploadedInvoices.spec.js:45:3 › PRISM – Full Application E2E Cycle › TC01_Master – Execute full Upload, Review, and Validation Flow (41.7s)
+[fileHelper] Loaded 2 file(s) from: C:\Users\melvi\OneDrive\Desktop\playwright\tests\temp
+[DEBUG] Strategy 1: Using setInputFiles directly on hidden file input
+  ✘  2 [PRISM – Chromium] › tests\PRISM\test\verifyUploadedInvoices.spec.js:45:3 › PRISM – Full Application E2E Cycle › TC01_Master – Execute full Upload, Review, and Validation Flow (retry #1) (42.4s)
+[fileHelper] Loaded 2 file(s) from: C:\Users\melvi\OneDrive\Desktop\playwright\tests\temp
+[DEBUG] Strategy 1: Using setInputFiles directly on hidden file input
+  ✘  3 [PRISM – Chromium] › tests\PRISM\test\verifyUploadedInvoices.spec.js:45:3 › PRISM – Full Application E2E Cycle › TC01_Master – Execute full Upload, Review, and Validation Flow (retry #2) (41.5s)
+
+
+  1) [PRISM – Chromium] › tests\PRISM\test\verifyUploadedInvoices.spec.js:45:3 › PRISM – Full Application E2E Cycle › TC01_Master – Execute full Upload, Review, and Validation Flow 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('row').filter({ hasText: 'E2E-Master-Job-1774809231262' }).first() to be visible[22m
+
+
+       at PRISM\pages\ReviewInvoicePage.js:52
+
+      50 |     // Increased to 30s: Backend sometimes queues job creation after the upload success toast
+      51 |     const jobRow = this.tableRows.filter({ hasText: jobName }).first();
+    > 52 |     await jobRow.waitFor({ state: 'visible', timeout: 30_000 });
+         |                  ^
+      53 |
+      54 |     const viewButton = jobRow.getByRole('button', { name: 'View', exact: true });
+      55 |     await viewButton.click();
+        at ReviewInvoicePage.clickAndViewJob (C:\Users\melvi\OneDrive\Desktop\playwright\tests\PRISM\pages\ReviewInvoicePage.js:52:18)
+        at C:\Users\melvi\OneDrive\Desktop\playwright\tests\PRISM\test\verifyUploadedInvoices.spec.js:72:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium\error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('row').filter({ hasText: 'E2E-Master-Job-1774809274096' }).first() to be visible[22m
+
+
+       at PRISM\pages\ReviewInvoicePage.js:52
+
+      50 |     // Increased to 30s: Backend sometimes queues job creation after the upload success toast
+      51 |     const jobRow = this.tableRows.filter({ hasText: jobName }).first();
+    > 52 |     await jobRow.waitFor({ state: 'visible', timeout: 30_000 });
+         |                  ^
+      53 |
+      54 |     const viewButton = jobRow.getByRole('button', { name: 'View', exact: true });
+      55 |     await viewButton.click();
+        at ReviewInvoicePage.clickAndViewJob (C:\Users\melvi\OneDrive\Desktop\playwright\tests\PRISM\pages\ReviewInvoicePage.js:52:18)
+        at C:\Users\melvi\OneDrive\Desktop\playwright\tests\PRISM\test\verifyUploadedInvoices.spec.js:72:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('row').filter({ hasText: 'E2E-Master-Job-1774809318409' }).first() to be visible[22m
+
+
+       at PRISM\pages\ReviewInvoicePage.js:52
+
+      50 |     // Increased to 30s: Backend sometimes queues job creation after the upload success toast
+      51 |     const jobRow = this.tableRows.filter({ hasText: jobName }).first();
+    > 52 |     await jobRow.waitFor({ state: 'visible', timeout: 30_000 });
+         |                  ^
+      53 |
+      54 |     const viewButton = jobRow.getByRole('button', { name: 'View', exact: true });
+      55 |     await viewButton.click();
+        at ReviewInvoicePage.clickAndViewJob (C:\Users\melvi\OneDrive\Desktop\playwright\tests\PRISM\pages\ReviewInvoicePage.js:52:18)
+        at C:\Users\melvi\OneDrive\Desktop\playwright\tests\PRISM\test\verifyUploadedInvoices.spec.js:72:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry2\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\PRISM-test-verifyUploadedI-ebbd6--Review-and-Validation-Flow-PRISM-–-Chromium-retry2\error-context.md
+
+  1 failed
+    [PRISM – Chromium] › tests\PRISM\test\verifyUploadedInvoices.spec.js:45:3 › PRISM – Full Application E2E Cycle › TC01_Master – Execute full Upload, Review, and Validation Flow 

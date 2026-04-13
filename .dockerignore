@@ -1,0 +1,35 @@
+# Git & version control
+.git
+.gitignore
+.github
+
+# Editor / IDE
+.vscode
+
+# Playwright output artifacts (generated at runtime inside the container)
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
+# Logs
+*.log
+recent_test.log
+test.log
+test-results.txt
+tmpout.txt
+
+# Temporary / scratch files
+tmp_inspect_pdf.js
+
+# Screenshots captured during local runs
+screenshot.png
+
+# Environment secrets — pass these via --env-file at runtime
+.env
+
+# Docker itself
+Dockerfile
+.dockerignore

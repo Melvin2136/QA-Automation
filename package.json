@@ -1,20 +1,29 @@
 {
-    "name":  "playwright",
-    "version":  "1.0.0",
-    "description":  "",
-    "main":  "index.js",
-    "scripts":  {
-                    "send:tech-news":  "node scripts/daily-tech-news-whatsapp.js",
-                    "send:tech-news:dry":  "node scripts/daily-tech-news-whatsapp.js --dry-run"
-                },
-    "keywords":  [
-
-                 ],
-    "author":  "",
-    "license":  "ISC",
-    "type":  "commonjs",
-    "devDependencies":  {
-                            "@playwright/test":  "^1.58.2",
-                            "@types/node":  "^25.3.0"
-                        }
+    "name": "playwright",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "send:tech-news": "node scripts/daily-tech-news-whatsapp.js",
+        "send:tech-news:dry": "node scripts/daily-tech-news-whatsapp.js --dry-run",
+        "test:prism": "npx playwright test tests/PRISM/test/",
+        "test:prism:upload": "npx playwright test tests/PRISM/test/uploadInvoice.spec.js",
+        "test:prism:headed": "npx playwright test tests/PRISM/test/uploadInvoice.spec.js --headed",
+        "test:prism:debug": "npx playwright test tests/PRISM/test/uploadInvoice.spec.js --debug",
+        "test:prism:ui": "npx playwright test tests/PRISM/test/ --ui",
+        "test:report": "npx playwright show-report"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@playwright/test": "^1.58.2",
+        "@types/node": "^25.3.0"
+    },
+    "dependencies": {
+        "@anthropic-ai/sdk": "^0.87.0",
+        "pdf-parse": "^2.4.5",
+        "tesseract.js": "^7.0.0"
+    }
 }
